@@ -116,9 +116,6 @@
       const open = nav.getAttribute("data-open") === "true";
       nav.setAttribute("data-open", !open);
     });
-    slot.querySelector("[data-theme-toggle]").addEventListener("click", () => {
-      applyTheme(STATE.theme === "dark" ? "light" : "dark");
-    });
   }
 
   /* ---------------------------------------------------------
