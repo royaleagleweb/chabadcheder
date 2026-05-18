@@ -11,13 +11,32 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Deploy
+        continue-on-error: true
         run: |
-          ACCOUNT_ID=$(curl -s "https://api.cloudflare.com/client/v4/accounts" \
-            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" | jq -r '.result[0].id')
-          echo "Account ID: $ACCOUNT_ID"
-          npx wrangler@latest pages deploy ./ \
-            --project-name=chabadcheder \
-            --account-id=$ACCOUNT_ID \
-            --commit-dirty=true
+          {
+            echo "=== token verify ==="
+            curl -s "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+            echo ""
+            echo "=== accounts ==="
+            ACCOUNT_RESP=$(curl -s "https://api.cloudflare.com/client/v4/accounts" \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN")
+            echo "$ACCOUNT_RESP"
+            ACCOUNT_ID=$(echo "$ACCOUNT_RESP" | jq -r '.result[0].id')
+            echo "Account ID: [$ACCOUNT_ID]"
+            echo "=== wrangler pages deploy ==="
+            npx wrangler@latest pages deploy ./ \
+              --project-name=chabadcheder \
+              --account-id=$ACCOUNT_ID \
+              --commit-dirty=true 2>&1
+          } | tee deploy-output.txt
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Commit deploy output
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add deploy-output.txt
+          git diff --staged --quiet || git commit -m "chore: save deploy output [skip ci]"
+          git push
