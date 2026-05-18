@@ -1,0 +1,25 @@
+=== token verify ===
+{"result":{"id":"056d55ef7610b6ecf8accca56701e16a","status":"active"},"success":true,"errors":[],"messages":[{"code":10000,"message":"This API Token is valid and active","type":null}]}
+=== accounts ===
+{"result":[{"id":"2b8bb2834c3942b88a71e4f6e2b968e2","name":"Roy@royaleagleweb.com's Account","type":"standard","settings":{"enforce_twofactor":false,"api_access_enabled":null,"access_approval_expiry":null,"abuse_contact_email":null,"oauth_app_access_enabled":true},"legacy_flags":{"enterprise_zone_quota":{"maximum":0,"current":0,"available":0}},"created_on":"2026-02-11T01:06:43.734189Z"}],"result_info":{"page":1,"per_page":20,"total_pages":1,"count":1,"total_count":1},"success":true,"errors":[],"messages":[]}
+Account ID: [2b8bb2834c3942b88a71e4f6e2b968e2]
+=== wrangler pages deploy ===
+npm warn exec The following package was not found and will be installed: wrangler@4.92.0
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'wrangler@4.92.0',
+npm warn EBADENGINE   required: { node: '>=22.0.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@cloudflare/kv-asset-handler@0.5.0',
+npm warn EBADENGINE   required: { node: '>=22.0.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'miniflare@4.20260515.0',
+npm warn EBADENGINE   required: { node: '>=22.0.0' },
+npm warn EBADENGINE   current: { node: 'v20.20.2', npm: '10.8.2' }
+npm warn EBADENGINE }
+Wrangler requires at least Node.js v22.0.0. You are using v20.20.2. Please update your version of Node.js.
+
+Consider using a Node.js version manager such as https://volta.sh/ or https://github.com/nvm-sh/nvm.
