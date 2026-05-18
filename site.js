@@ -106,7 +106,6 @@
           <button class="nav-toggle" data-nav-toggle aria-label="Open menu">${menuIcon()}</button>
           <nav class="main-nav" data-main-nav>
             ${navLinks}
-            <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
           </nav>
         </div>
       </header>
