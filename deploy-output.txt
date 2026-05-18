@@ -9,12 +9,11 @@ npm warn exec The following package was not found and will be installed: wrangle
   Ignoring configuration file for now, and proceeding with project deploy.
 
 
+Uploading... (0/15)
+Uploading... (5/15)
+Uploading... (10/15)
+Uploading... (15/15)
+✨ Success! Uploaded 15 files (2.01 sec)
 
-[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mA request to the Cloudflare API (/accounts/2b8bb2834c3942b88a71e4f6e2b968e2/pages/projects/chabadcheder) failed.[0m
-
-  Project not found. The specified project name does not match any of your existing projects. [code: 8000007]
-  
-  If you think this is a bug, please open an issue at: [4mhttps://github.com/cloudflare/workers-sdk/issues/new/choose[0m
-
-
-🪵  Logs were written to "/home/runner/.config/.wrangler/logs/wrangler-2026-05-18_13-41-24_655.log"
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://0dd1c9da.chabadcheder.pages.dev

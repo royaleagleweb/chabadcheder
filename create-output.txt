@@ -1,0 +1,46 @@
+{
+  "result": {
+    "id": "1978976f-46a5-458c-8a20-57f587615fe0",
+    "name": "chabadcheder",
+    "subdomain": "chabadcheder.pages.dev",
+    "domains": [
+      "chabadcheder.pages.dev"
+    ],
+    "build_config": {
+      "web_analytics_tag": null,
+      "web_analytics_token": null
+    },
+    "deployment_configs": {
+      "preview": {
+        "env_vars": null,
+        "fail_open": true,
+        "always_use_latest_compatibility_date": false,
+        "compatibility_date": "2026-05-18",
+        "compatibility_flags": [],
+        "build_image_major_version": 3,
+        "usage_model": "standard"
+      },
+      "production": {
+        "env_vars": null,
+        "fail_open": true,
+        "always_use_latest_compatibility_date": false,
+        "compatibility_date": "2026-05-18",
+        "compatibility_flags": [],
+        "build_image_major_version": 3,
+        "usage_model": "standard"
+      }
+    },
+    "latest_deployment": null,
+    "canonical_deployment": null,
+    "created_on": "2026-05-18T13:44:01.446119Z",
+    "production_branch": "main",
+    "production_script_name": "pages-worker--13925252-production",
+    "preview_script_name": "pages-worker--13925252-preview",
+    "uses_functions": null,
+    "framework": "",
+    "framework_version": ""
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
+}
