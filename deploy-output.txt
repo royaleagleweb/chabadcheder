@@ -11,7 +11,7 @@ npm warn exec The following package was not found and will be installed: wrangle
 
 Uploading... (14/15)
 Uploading... (15/15)
-✨ Success! Uploaded 1 files (14 already uploaded) (0.92 sec)
+✨ Success! Uploaded 1 files (14 already uploaded) (1.03 sec)
 
 🌎 Deploying...
-✨ Deployment complete! Take a peek over at https://6cb45d41.chabadcheder.pages.dev
+✨ Deployment complete! Take a peek over at https://f4470421.chabadcheder.pages.dev
